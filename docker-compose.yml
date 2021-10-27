@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  web:
+    build: ./src
+    command: |
+      bash -c 'while !</dev/tcp/db/3306; do sleep 1; done; uvicorn app.main:app --reload --workers 1 --host 0.0.0.0 --port 8080'
+    volumes:
+      - ./src/:/usr/src/app/
+    ports:
+      - 8002:8080
+  db:
+    mysql5:
+      image: mysql:5.7
+      restart: always
+      environment:
+        MYSQL_ROOT_PASSWORD: mysql
+        MYSQL_USER: mysql
+        MYSQL_PASSWORD: mysql
+        MYSQL_DATABASE: test
+      ports:
+        - 3306:3306
+    expose:
+      - 3306

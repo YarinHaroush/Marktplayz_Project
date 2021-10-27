@@ -1,4 +1,3 @@
-# Marketplayz 
     
 <h1>⚡ FastAPI Python SQL</h1>
 

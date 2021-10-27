@@ -1,19 +1,4 @@
 # Marketplayz 
-## Summary
-The system exposes data of games & gamers,  
-using fastapi (which includes flask & swagger).
-
-## How to run:
-1. For local run:
-<br>
-    pip install -r requirements.txt
-<br>
-    python main.py
-2. Run using docker:
-<br>
-    docker build . -t marketplayz
-<br>
-    docker run marketplayz -p 8080:8080
     
 <h1>⚡ FastAPI Python SQL</h1>
 
@@ -43,9 +28,7 @@ using fastapi (which includes flask & swagger).
 <h4>💾 Setup</h4>
 
 <ul>
-  <li>Install Python</li>
-  <li>Install pip</li>
-  <li>Install pip module using pip3 install --upgrade google-cloud-bigquery</li>
-  <li>Add code</li>
-  <li>Run App</li>
+  <li>For local run: pip install -r requirements.txt</li>
+  <li>Run using docker: docker build . -t marketplayz</li>
+  <li>docker run marketplayz -p 8080:8080</li>
 </ul>    
